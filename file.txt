@@ -1,0 +1,112 @@
+PS C:\Users\chm44\sonika> git add xyz.c
+PS C:\Users\chm44\sonika> git commit -m "first"
+[master (root-commit) add2d02] first
+ 1 file changed, 4 insertions(+)
+ create mode 100644 sonika/xyz.c
+PS C:\Users\chm44\sonika> git add xyz.c         
+PS C:\Users\chm44\sonika> git commit -m "second"
+[master 2a21e3a] second
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+PS C:\Users\chm44\sonika> git  branch
+* master
+PS C:\Users\chm44\sonika> git  branch -M main
+PS C:\Users\chm44\sonika> git branch
+* main
+PS C:\Users\chm44\sonika> git add xyz.c         
+PS C:\Users\chm44\sonika> git add xyz.c
+PS C:\Users\chm44\sonika> git commit -m "heyyy" 
+[main 1d05c4f] heyyy
+ 1 file changed, 3 insertions(+)
+PS C:\Users\chm44\sonika> git log
+commit 1d05c4ff8f856841cb240e158a01d21d7db6ed69 (HEAD -> main)
+Author: priya <priyamsangur2006@gmail.com>
+Date:   Thu Apr 9 00:14:41 2026 +0530
+
+    heyyy
+
+commit 2a21e3a964c9c025873aec3b2fc36d00adea1435
+Author: priya <priyamsangur2006@gmail.com>
+Date:   Thu Apr 9 00:12:03 2026 +0530
+
+    second
+
+commit add2d02fb30f3f5f74f203c4f5335f41c2f0c120
+Author: priya <priyamsangur2006@gmail.com>
+Date:   Thu Apr 9 00:10:40 2026 +0530
+
+    first
+PS C:\Users\chm44\sonika> git checkout add2d02fb30f3f5f74f203c4f5335f41c2f0c120
+Note: switching to 'add2d02fb30f3f5f74f203c4f5335f41c2f0c120'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at add2d02 first
+PS C:\Users\chm44\sonika> git branch
+* (HEAD detached at add2d02)
+  main
+PS C:\Users\chm44\sonika> git checkout main
+Previous HEAD position was add2d02 first
+Switched to branch 'main'
+PS C:\Users\chm44\sonika> git push origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\chm44\sonika> git remote add origin https://github.com/chmounika695-pixel/shreya.git
+PS C:\Users\chm44\sonika> git push -u origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (12/12), 867 bytes | 72.00 KiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/chmounika695-pixel/shreya.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\chm44\sonika> git diff main origin/main
+PS C:\Users\chm44\sonika> git merge origin/main
+Already up to date.
+PS C:\Users\chm44\sonika> git diff main origin/main
+PS C:\Users\chm44\sonika> git fetch origin
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (4/4), 998 bytes | 34.00 KiB/s, done.
+From https://github.com/chmounika695-pixel/shreya
+   1d05c4f..4976c7c  main       -> origin/main
+PS C:\Users\chm44\sonika> git merge origin/main    
+Updating 1d05c4f..4976c7c
+Fast-forward
+ sonika/xyz.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+PS C:\Users\chm44\sonika> git diff main origin/main
+PS C:\Users\chm44\sonika> git fetch origin         
+PS C:\Users\chm44\sonika> git diff main origin/main
+PS C:\Users\chm44\sonika> git add zpp.py
+PS C:\Users\chm44\sonika> git commit -m "print"
+[main 0d266da] print
+ 1 file changed, 1 insertion(+)
+ create mode 100644 sonika/zpp.py
+PS C:\Users\chm44\sonika> git reset --hard HEAD-1
+fatal: ambiguous argument 'HEAD-1': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+PS C:\Users\chm44\sonika> git add zpp.py         
+PS C:\Users\chm44\sonika> git rm zpp.py
+rm 'sonika/zpp.py'
